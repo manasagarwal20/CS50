@@ -28,21 +28,21 @@ int main()
   float S = cs*100/countword;
  // float L = ceilf(lw * 100) / 100;
  // float S = ceilf(sw * 100) / 100;
- float index1=0.0588 * L - 0.296 * S - 15.8;
- // int index =0.0588 * L - 0.296 * S - 15.8;
+ //float index1=0.0588 * L - 0.296 * S - 15.8;
+  int index =0.0588 * L - 0.296 * S - 15.8;
   //printf("%d",index);
  // printf("%f",index1);
-  if(index1 > 16)
+  if(index > 16)
   {
         printf("Grade 16+\n");
   }
-  else if(index1< 1)
+  else if(index< 1)
   {
       printf("Before Grade 1\n");
   }
   else
   {
-      printf("Grade %d\n",index1);
+      printf("Grade %d\n",index);
   }
 
 
