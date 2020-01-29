@@ -24,14 +24,14 @@ int main()
         }
     }
   //  int count_l= count_letters(str);
-  float L = count_l*100/countword;
-  float S = cs*100/countword;
+  float L = (count_l/countword)*100;
+  float S = (cs/countword)*100;
   int index = round(0.0588 * L - 0.296 * S - 15.8);
-  if(index>16)
+  if(index > 16)
   {
         printf("Grade 16+\n");
   }
-  else if(index<1)
+  else if(index < 1)
   {
       printf("Before Grade 1\n");
   }
