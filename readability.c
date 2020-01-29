@@ -24,10 +24,8 @@ int main()
         }
     }
 
-  float lw = count_l*100/countword;
-  float sw = cs*100/countword;
-  float L = ceilf(lw * 100) / 100;
-  float S = ceilf(sw * 100) / 100;
+  float L = count_l*100/countword;
+  float S = cs*100/countword;
   int index = round(0.0588 * L - 0.296 * S - 15.8);
   if(index > 16)
   {
