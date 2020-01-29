@@ -28,8 +28,9 @@ int main()
   float S = cs*100/countword;
   float index1=0.0588 * L - 0.296 * S - 15.8;
   int index =0.0588 * L - 0.296 * S - 15.8;
+//  printf("%f",index1);
   float temp_index=index1-index;
-  if(0.75<temp_index){
+  if(0.55<=temp_index){
       index=round(index1);
   }
   if(index > 16)
