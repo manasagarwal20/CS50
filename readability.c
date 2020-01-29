@@ -26,12 +26,12 @@ int main()
 
   float L = count_l*100/countword;
   float S = cs*100/countword;
- // float L = ceilf(lw * 100) / 100;
- // float S = ceilf(sw * 100) / 100;
- //float index1=0.0588 * L - 0.296 * S - 15.8;
+  float index1=0.0588 * L - 0.296 * S - 15.8;
   int index =0.0588 * L - 0.296 * S - 15.8;
-  //printf("%d",index);
- // printf("%f",index1);
+  float temp_index=index1-index;
+  if(0.75<temp_index){
+      index=round(index1);
+  }
   if(index > 16)
   {
         printf("Grade 16+\n");
