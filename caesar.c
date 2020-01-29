@@ -10,13 +10,16 @@ int main(int argc, char *argv[] )
     if(atoi(argv[1]))
     {
         int test = atoi(argv[1]);
-       // int x = &test;
+       test=test%26;
        char c;
         string str = get_string("plaintext: ");
         int n = strlen(str);
         for(int i = 0; i < n; i++)
         {
+
             c = str[i];
+            if(islower(c) || isupper(c))
+            {
             c=(c+test);
             if((c>=65 && c<=90) || (c>=97 && c<=122))
             {
@@ -24,8 +27,14 @@ int main(int argc, char *argv[] )
             }
             else
             {
+
                 c = c - 26;
                 str[i] = c;
+            }
+            }
+            else
+            {
+                str[i]=str[i];
             }
 
         }
