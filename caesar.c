@@ -12,7 +12,7 @@ int main(int argc, char *argv[] )
         int test = atoi(argv[1]);
        // int x = &test;
        char c;
-        string str = get_string("Plaintext: ");
+        string str = get_string("plaintext: ");
         int n = strlen(str);
         for(int i = 0; i < n; i++)
         {
@@ -29,7 +29,7 @@ int main(int argc, char *argv[] )
             }
 
         }
-        printf("Ciphertext: %s\n", str);
+        printf("ciphertext: %s\n", str);
     }
 
     else
