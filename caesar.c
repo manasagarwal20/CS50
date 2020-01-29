@@ -4,51 +4,53 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char *argv[] )
+int main(int argc, char *argv[])
 {
-    if(argc==2)
-    if(atoi(argv[1]))
+    if (argc == 2)
     {
-        int test = atoi(argv[1]);
-       test=test%26;
-       char c;
-        string str = get_string("plaintext: ");
-        int n = strlen(str);
-        for(int i = 0; i < n; i++)
+        if (atoi(argv[1]))
         {
-
-            c = str[i];
-            if(islower(c) || isupper(c))
-            {
-            c=(c+test);
-            if((c>=65 && c<=90) || (c>=97 && c<=122))
-            {
-                str[i]=c;
-            }
-            else
+            int test = atoi(argv[1]);
+            test = test % 26;
+            char c;
+            string str = get_string("plaintext: ");
+            int n = strlen(str);
+            for (int i = 0; i < n; i++)
             {
 
-                c = c - 26;
-                str[i] = c;
-            }
-            }
-            else
-            {
-                str[i]=str[i];
-            }
+                c = str[i];
+                if (islower(c) || isupper(c))
+                {
+                    c = (c + test);
+                    if((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+                    {
+                        str[i] = c;
+                    }
+                    else
+                    {
+                        c = c - 26;
+                        str[i] = c;
+                    }
+                }
+                else
+                {
+                    str[i] = str[i];
+                }
 
+            }
+            printf("ciphertext: %s\n", str);
         }
-        printf("ciphertext: %s\n", str);
+
+        else
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
+    }
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
     }
 
-    else
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
-    else
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
 }
