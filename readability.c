@@ -2,7 +2,7 @@
 #include<cs50.h>
 #include<string.h>
 #include <ctype.h>
-
+#include<math.h>
 int main()
 {
     string str = get_string("Text: ");
@@ -26,7 +26,7 @@ int main()
   //  int count_l= count_letters(str);
   float L = count_l*100/countword;
   float S = cs*100/countword;
-  int index = 0.0588 * L - 0.296 * S - 15.8;
+  int index = round(0.0588 * L - 0.296 * S - 15.8);
   if(index>16)
   {
         printf("Grade 16+\n");
