@@ -3,25 +3,25 @@
 
 int main(void)
 {
-int n;
-n=get_int("Height: ");
-while(n>8 || n<1)
-{
-    n=get_int("Height: ");
-}
-for(int i=0;i<n;i++)
-{
-    for(int j=0;j<n;j++)
+    int n;
+    n = get_int("Height: ");
+    while(n > 8 || n < 1)
+    {   
+        n = get_int("Height: ");
+    }
+    for(int i = 0;i < n;i++)
     {
-        if((j+i+1)>=n)
+        for(int j = 0;j < n ;j++)
         {
-            printf("#");
+            if((j + i + 1) >= n)
+            {
+                printf("#");
+            }
+            else
+            {
+                printf(" ");
+            }
         }
-        else
-        {
-            printf(" ");
-        }
-     }
-printf("\n");
-}
+        printf("\n");
+    }
 }
