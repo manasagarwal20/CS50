@@ -4,12 +4,14 @@
 
 int main(int argc, char *argv[])
 {
+    //ensure correct input
     if (argc != 2)
     {
         fprintf(stderr, "Usage: ./recover <filename>\n");
         return 1;
     }
 
+    // file open
     char *file = argv[1];
     FILE *inputfile = fopen(file, "r");
     if (inputfile == NULL)
@@ -18,7 +20,7 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-
+    //read buffer
     uint8_t buffer[512];
     int filecounter = 0;
     FILE *outfile = NULL;
