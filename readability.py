@@ -8,7 +8,7 @@ s = 0
 for i in text:
     if i.isalpha():
         letter = letter + 1
-        elif i == ' ':
+    elif i == ' ':
         w = w + 1
     elif i == '.' or i == "!" or i == '?':
         s = s + 1
