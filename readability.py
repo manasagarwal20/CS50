@@ -22,4 +22,4 @@ if index > 16:
 elif index < 1:
     print("Before Grade 1")
 else:
-    print("Grade: ", index)
+    print("Grade ", index)
